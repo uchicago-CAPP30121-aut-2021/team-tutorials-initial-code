@@ -1,2 +1,7 @@
-*.csv
+divvy_2013_stations.csv
+divvy_2013_trips.csv
+divvy_2013_trips_medium.csv
+divvy_2013_trips_small.csv
+divvy_2013_trips_tiny.csv
+divvy_data.tgz
 *.tgz
