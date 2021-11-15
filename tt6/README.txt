@@ -1,5 +1,7 @@
 # CS 121: Recursion
 
-recursion.py: do your work in this file
+recursion.py: Python file where you will write your code.
+
+tree.py: Python file that provides a Tree class.
 
 README.txt: this file

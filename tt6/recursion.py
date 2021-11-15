@@ -1,4 +1,5 @@
 from math import sin
+from tree import Tree
 
 def is_power_of_two(n):
     # replace the pass statement with your code
@@ -9,45 +10,38 @@ def fib(n):
     # replace the pass statement with your code
     pass
 
+
 def find_root_sqrt2(epsilon, a, b):
     # replace the pass statement with your code
     pass
 
 
-t0 = {"key":"node0",
-      "val":27,
-      "children":[]}
+t0 = Tree("node0", 27)
 
-t1 = {"key":"node0",
-      "val":1,
-      "children":[{"key":"node0",
-                   "val":2,
-                   "children":[{"key":"node0",
-                                "val":3,
-                                "children":[]}]},
-                  {"key":"node0",
-                   "val":4,
-                   "children":[]},
-                  {"key":"node0",
-                   "val":5,
-                   "children":[]}]}
+t1 = Tree("node0", 1)
+child1 = Tree("node1", 2)
+child1.add_child(Tree("node2", 3))
+t1.add_child(child1)
+t1.add_child(Tree("node3", 4))
+t1.add_child(Tree("node4", 5))
 
 
 def count_leaves(t):
     '''
     Count the number of leaves in the tree rooted at t
-    
-    Inputs: (dictionary) a tree
-    
+
+    Inputs: (Tree) a tree
+
     Returns: (integer) number of leaves in t
     '''
+    
     assert t is not None
 
-    if not t["children"]:
+    if t.num_children() == 0:
         return 1
 
     num_leaves = 0
-    for kid in t["children"]:
+    for kid in t.children:
         num_leaves += count_leaves(kid)
 
     return num_leaves
